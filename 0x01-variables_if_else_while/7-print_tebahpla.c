@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 /**
  * main - Entry point
  *
@@ -6,11 +7,12 @@
  */
 int main(void)
 {
-	int i;
+	char alpha = 'z';
 
-	for (i = 0; i < 10; i++)
+	while (alpha >= 'a')
 	{
-		printf("%d", i);
+		putchar(alpha);
+		alpha--;
 	}
 	putchar('\n');
 	return (0);
