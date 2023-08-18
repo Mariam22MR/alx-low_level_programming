@@ -1,37 +1,23 @@
-#include <stdio.h>
-#include <math.h>
-
+#include "main.h"
 
 /**
- * main - find the prime factors
+ * print_number - a function that prints an integer
  *
- * Return: 0
+ * @n: int character
  */
-
-
-int main(void)
+void print_number(int n)
 {
-	long int a = 612852475143;
-	long int b = -1;
-	int c;
+	unsigned int m = n;
 
-	while (a % 2 == 0)
+	if (n < 0)
 	{
-		b = 2;
-		a = a / 2;
+		_putchar('-');
+		m = -m;
+	}
+	if ((m / 10) > 0)
+	{
+		print_number(m / 10);
 	}
 
-	for (c = 3; c <= sqrt(a); c = c + 2)
-	{
-		while (a % c == 0)
-		{
-			b = c;
-			a = a / c;
-		}
-	}
-	if (a > 2)
-		b = a;
-	printf("%ld\n", b);
-
-	return (0);
+	_putchar((m % 10) + 48);
 }
