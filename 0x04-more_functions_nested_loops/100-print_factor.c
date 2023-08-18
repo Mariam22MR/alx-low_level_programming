@@ -1,37 +1,22 @@
 #include <stdio.h>
-#include <math.h>
-
 
 /**
- * main - find the prime factors
- *
+ * main - entry block
+ * @void: no argument
  * Return: 0
  */
-
-
 int main(void)
 {
-	long int a = 612852475143;
-	long int b = -1;
-	int c;
+	long i, number = 612852475143;
 
-	while (a % 2 == 0)
+	for (i = 2; i <= number; i++)
 	{
-		b = 2;
-		a = a / 2;
-	}
-
-	for (c = 3; c <= sqrt(a); c = c + 2)
-	{
-		while (a % c == 0)
+		if (number % i == 0)
 		{
-			b = c;
-			a = a / c;
+			number = number / i;
+			i--;
 		}
 	}
-	if (a > 2)
-		b = a;
-	printf("%ld\n", b);
-
+	printf("%lu\n", i);
 	return (0);
 }
