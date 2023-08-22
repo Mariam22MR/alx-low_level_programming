@@ -1,1 +1,24 @@
-{"payloaalse,"fileTree":{"":{"items":[{"name":"101-crackme","path":"101-crackme","contentType":"file"},{"name":"README.md","path":"README.md","contentType":"file"}],"totalCount":2}},"fileTreeProcessingTime":1.8141330000000002,"foldersToFetch":[],"reducedMotionEnabled":null,"repo":{"id":71317820,"defaultBranch":"master","name":"0x04.c","ownerLogin":"alx-tools","currentUserCanPush":false,"isF:false,"configFilePath":null,"networkDependabotPath":"/alx-tools/0x04.c/network/updates","dismissConfigurationNoticePath":"/settings/dismiss-notice/dependabot_configuration_notice","configurationNoticeDismissed":null,"repoAlertsPath":"/alx-tools/0x04.c/security/dependabot","repoSecurityAndAnalysisPath":"/alx-tools/0x04.c/settings/security_analysis","repoOwnerIsOrg":true,"currentUserCanAdminRepo":false},"displayName":"101-crackme","displayUrl":"https://github.com/alx-tools/0x04.c/blob/2c1368fb98e8bc1f391be502e45a52d379ff3be8/101-crackme?raw=true","headerInfo":{"blobSize":"8.48 KB","deleteInfo":{"deleteTooltip":"You must be signed in to make or propose changes"},"editInfo":{"editTooltip":"You must be signed in to make or propose changes"},"ghDesktopPath":null,"gitLfsPath":null,"onBranch":false,"shortPath":"9846b07","siteNavLoginPath":"/login?return_to=https%3A%2F%2Fgithub.com%2Falx-tools%2F0x04.c%2Fblob%2F2c1368fb98e8bc1f391be502e45a52d379ff3be8%2F101-crackme","isCSV":false,"isRichtext":false,"toc":null,"lineInfo":{"truncatedLoc":null,"truncatedSloc":null},"mode":"executable file"},"image":false,"isCodeownersFile":null,"isPlain":false,"isValidLegacyIssueTemplate":false,"issueTemplateHelpUrl":"https://docs.github.com/articles/about-issue-and-pull-request-templates","issueTemplate":null,"discussionTemplate":null,"language":null,"languageID":null,"large":false,"loggedIn":false,"newDiscussionPath":"/alx-tools/0x04.c/discussions/new","newIssuePath":"/alx-tools/0x04.c/issues/new","planSupportInfo":{"repoIsFork":null,"repoOwnedByCurrentUser":null,"requestFullPath":"/alx-tools/0x04.c/blob/2c1368fb98e8bc1f391be502e45a52d379ff3be8/101-crackme","showFreeOrgGatedFeatureMessage":null,"showPlanSupportBanner":null,"upgradeDataAttributes":null,"upgradePath":null},"publishBannersInfo":{"dismissActionNoticePath":"/settings/dismiss-notice/publish_action_from_dockerfile","dismissStackNoticePath":"/settings/dismiss-notice/publish_stack_from_file","releasePath":"/alx-tools/0x04.c/releases/new?marketplace=true","showPublishActionBanner":false,"showPublishStackBanner":false},"renderImageOrRaw":true,"richText":null,"renderedFileInfo":null,"shortPath":null,"tabSize":8,"topBannersInfo":{"overridingGlobalFundingFile":false,"globalPreferredFundingPath":null,"repoOwner":"alx-tools","repoName":"0x04.c","showInvalidCitationWarning":false,"citationHelpUrl":"https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-on-github/about-citation-files","showDependabotConfigurationBanner":false,"actionsOnboardingTip":null},"truncated":false,"viewable":false,"workflowRedirectUrl":null,"symbols":null},"copilotInfo":null,"csrf_tokens":{"/alx-tools/0x04.c/branches":{"post":"5gHHl5R1cQIutl5kQ5f63_EoJWXL_JXWtW1FIxocu4XDZulEcJ9FUMl-ngaxLQ2RsNBmfffowjwlzp0flEIQTA"},"/repos/preferences":{"post":"VmfhdO8nVDUGyrMti503cQ6wBt5nhTAIM_KqWXZ4-SlpYe4tLkVTMsYtjwC0llnabqVzOzEipOJBnDjz15DRjw"}}},"title":"0x04.c/101-crackme at 2c1368fb98e8bc1f391be502e45a52d379ff3be8 · alx-tools/0x04.c"}
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+/**
+ * main - generates random passwords for 101-crackme
+ * Return: zero
+ */
+
+int main(void)
+{
+	int sum;
+	char c;
+
+	srand(time(NULL));
+	while (sum <= 2645)
+	{
+		c = rand() % 128;
+		sum += c;
+		putchar(c);
+	}
+	putchar(2772 - sum);
+	return (0);
+}
