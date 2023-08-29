@@ -2,18 +2,18 @@
 
 /**
  * *_memset - copies memory area
- * @s: memory area
- * @b: char to copy
+ * @dest: memory area
+ * @src: char to copy
  * @n: length of b to be copies
  * Return: pointer to s
 */
-char *_memcpy(char *s, char *b, unsigned int n)
+char *_memcpy(char *dest, char *src, unsigned int n)
 {
 	unsigned int j;
 	
 	for (j = 0; n > j; j++)
 	{
-		s[j] = b[j];
+		dest[j] = src[j];
 	}
-	return (s);
+	return (dest);
 }
