@@ -6,7 +6,7 @@
  * @src: char to copy
  * @n: length of b to be copies
  *
- * Return: pointer to s
+ * Return: pointer to dest
 */
 
 char *_memcpy(char *dest, char *src, unsigned int n)
