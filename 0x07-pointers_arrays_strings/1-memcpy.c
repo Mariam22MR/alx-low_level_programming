@@ -1,10 +1,11 @@
 #include "main.h"
 
 /**
- * *_memset - copies memory area
+ * *_memcpy - copies memory area
  * @dest: memory area
  * @src: char to copy
  * @n: length of b to be copies
+ *
  * Return: pointer to s
 */
 
