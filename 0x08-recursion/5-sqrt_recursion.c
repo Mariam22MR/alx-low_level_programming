@@ -2,7 +2,8 @@
 
 /**
  * _sqrt_recursion - the natural square of a numbers
- * @n: numbers
+ * @n: number
+ * @x: number
  * Return: call square function
  */
 
