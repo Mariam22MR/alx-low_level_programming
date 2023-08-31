@@ -1,13 +1,13 @@
 #include "main.h"
 #include <stdio.h>
-
 /**
  * is_prime_number - checkes the numbers
  * @n: the number to be checked
  * @i: integer variable
+ * check_prime - checking if it prime number
  * Retur: 0 , 1
  */
-
+int check_prime(int n, int i);
 int is_prime_number(int n)
 {
 	return (check_prime(n, 2));
