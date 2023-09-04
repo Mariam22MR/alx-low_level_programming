@@ -10,12 +10,16 @@
 
 int main(int argc, char *argv[])
 {
-	int sum;
+	int i, sum = 1;
 
 	if (argc == 3)
 	{
-		sum = atoi(argv[1]) * atoi(argv[2]);
+		for (i = 1; i < argc; i++)
+		{
+			sum *= atoi(argv[i]);
+		}
 		printf("%d\n", sum);
+		return (0);
 	}
 	else
 	{
