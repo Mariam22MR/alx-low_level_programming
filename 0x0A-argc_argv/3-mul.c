@@ -10,12 +10,12 @@
 
 int main(int argc, char *argv[])
 {
-	int s;
+	int sum;
 
 	if (argc == 3)
 	{
-		s = atoi(argv[1]) * atoi(argv[2]);
-		printf("%d\n", s);
+		sum = atoi(argv[1]) * atoi(argv[2]);
+		printf("%d\n", sum);
 	}
 	else
 	{
