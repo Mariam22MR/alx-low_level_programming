@@ -7,7 +7,7 @@
  * @size: size of the array
  * Return: pointer to the array initialized or NULL
  */
-char *create_array(char a, unsigned int size)
+char *create_array(unsigned int size, char a)
 {
 	char *n = malloc(size);
 
