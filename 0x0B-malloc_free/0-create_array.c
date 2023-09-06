@@ -7,13 +7,12 @@
  * @size: size of the array
  * Return: pointer to the array initialized or NULL
  */
-
 char *create_array(char a, unsigned int size)
 {
 	char *n = malloc(size);
 
-	if (size == 0 || !n)
-		return ('\0');
+	if (size == 0 || n == 0)
+		return (0);
 
 	while (size--)
 		n[size] = a;
