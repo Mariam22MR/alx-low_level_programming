@@ -10,12 +10,12 @@
 int **alloc_grid(int width, int height)
 {
 	int **tap, i, j;
+	  tap = (int **) malloc(height * sizeof(int *));
 
 	if (width <= 0 || height <= 0 || tap == 0)
+	{	
 		return (NULL);
-
-	tap = (int **) malloc(height * sizeof(int *));
-
+	}
 	for (i = 0; i < height; i++)
 	{
 		tap[i] = (int *) malloc(sizeof(int) * width);
