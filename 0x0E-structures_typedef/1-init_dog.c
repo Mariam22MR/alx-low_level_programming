@@ -3,7 +3,7 @@
 
 /**
  * init_dog - initialize a veriavle of stract dog
- * @d: pointer to the strut name
+ * @d: pointer to the struct name
  * @name: the dog's name
  * @age: age's dog
  * @owner: owner's name
@@ -14,8 +14,8 @@ void init_dog(struct dog *d, char *name, float age, char *owner)
 {
 	if (d == NULL)
 
-	{	(*d).name = name;
-		(*d).age = age;
-		(*d).owner = owner;
+	{	d->name = name;
+		d->age = age;
+		d->owner = owner;
 	}
 }
