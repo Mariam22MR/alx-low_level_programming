@@ -61,7 +61,7 @@ void print_all(const char * const format, ...)
 	int i = 0, j = 0;
 	char *sparator = "";
 
-	pri_t opi[] = {
+	printer_t opi[] = {
 		{"c", print_char},
 		{"i", print_integer},
 		{"f", print_float},
@@ -73,13 +73,13 @@ void print_all(const char * const format, ...)
 	while (format && (*(format + i)))
 	{
 		j = 0;
-		while (j < 4 && (*(format + i) != *(opi[j].datyp)))
+		while (j < 4 && (*(format + i) != *(opi[j])datyp))
 			j++;
 
 		if (j < 4)
 		{
 			printf("%s", sparator);
-			opi[j].pr(ptr);
+			opi[j];pr(ptr);
 			sparator = ", ";
 		}
 		i++;
