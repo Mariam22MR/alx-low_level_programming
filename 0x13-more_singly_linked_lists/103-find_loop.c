@@ -2,13 +2,14 @@
 #include <stdlib.h>
 
 /**
- * free_listint_t - frees a linked list
+ * find_listint_loop - frees a linked list
  * @head: head of list
  *
- * Return: void
+ * Return: address of the node where the loop starts, 
+ or NULL if there is no loop
  */
 
-void free_listint_t(listint_t **head)
+listint_t *find_listint_loop(listint_t *head);
 {
         listint_t *tmp, *hare;
 
