@@ -2,28 +2,24 @@
 #include <stdlib.h>
 
 /**
- * looped_listint_count - finds loop in linked list.
- * @head: linked list to check.
+ * free_listint_t - frees a linked list
+ * @head: head of list
  *
- * Return: adress of node whereloop start, 0 if no loop.
+ * Return: void
  */
 
-size_t looped_listint_count(listint_t *head)
+void free_listint_t(listint_t **head)
 {
         listint_t *tmp, *hare;
 
-        if (head == NULL)
-                return (0);
-
-        for (hare = head->next; hare != NULL; hare = hare->next)
+        if (head != NULL)
         {
-                if (hare == hare->next)
-                        return (hare);
-
-                for (tmp = head; tmp != hare; tmp = tmp->next)
-                        if (tmp == hare->next)
-                                return (hare->next);
+                hare = *head;
+                while ((tmp = hare) != NULL)
+                {
+                        hare = hare->next;
+                        free(tmp);
+                }
+                *head = NULL;
         }
-
-        return (0);
 }
