@@ -2,24 +2,37 @@
 #include <stdlib.h>
 
 /**
- * free_listint_t - frees a linked list
- * @head: head of list
+ * find_listint_loop - find the loop in linked list.
+ * @head: head of list.
  *
- * Return: void
+ * Return: address of the node where the loop starts, 
+ * or NULL if there is no loop.
  */
 
-void free_listint_t(listint_t **head)
+listint_t *find_listint_loop(listint_t *head)
 {
-        listint_t *tmp, *hare;
+	listint_t *x = head,
+	listint_t *y = head;
 
-        if (head != NULL)
-        {
-                hare = *head;
-                while ((tmp = hare) != NULL)
-                {
-                        hare = hare->next;
-                        free(tmp);
-                }
-                *head = NULL;
-        }
+	if (head == NULL)
+		return (NULL);
+
+	while (x && y && y->next)
+	{
+		x = x->next;
+		y = y->next->next;
+
+		if (x == y)
+		{
+			x = head;
+
+			while (x != y)
+			{
+				x = x->next;
+				y = y->next;
+			}
+			return (x);
+		}
+	}
+	return (NULL);
 }
