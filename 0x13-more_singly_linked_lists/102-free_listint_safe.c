@@ -5,7 +5,7 @@
  * looped_listint_count - finds loop in linked list.
  * @head: linked list to check.
  *
- * Return: adress of node whereloop start, 0 if no loop.
+ * Return: adress of node whereloop start, NULL if no loop.
  */
 
 size_t looped_listint_count(listint_t *head)
@@ -13,7 +13,7 @@ size_t looped_listint_count(listint_t *head)
 	listint_t *tmp, *hare;
 
 	if (head == NULL)
-		return (0);
+		return (NULL);
 	
 	for (hare = head->next; hare != NULL; hare = hare->next)
 	{
@@ -25,7 +25,7 @@ size_t looped_listint_count(listint_t *head)
 				return (hare->next);
 	}
 
-	return (0);
+	return (NULL);
 }
 
 /**
