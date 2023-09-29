@@ -7,9 +7,7 @@
  */
 void print_char(va_list argv)
 {
-	char chars = va_arg(argv, int);
-
-	printf("%c", chars);
+	printf("%c", va_arg(args, int));
 }
 
 /**
@@ -18,9 +16,7 @@ void print_char(va_list argv)
  */
 void print_integer(va_list argv)
 {
-	int integ = va_arg(argv, int);
-
-	printf("%d", integ);
+	printf("%d", va_arg(args, int));
 }
 
 /**
@@ -29,9 +25,7 @@ void print_integer(va_list argv)
  */
 void print_float(va_list argv)
 {
-	float flo = va_arg(argv, double);
-
-	printf("%f", flo);
+	printf("%f", va_arg(args, double));
 }
 
 /**
@@ -40,14 +34,10 @@ void print_float(va_list argv)
  */
 void print_string(va_list argv)
 {
-	char *str = va_arg(argv, char *);
+	char *str = va_arg(args, char *);
 
 	if (str == NULL)
-	{
-		printf("(nil)");
-		return;
-	}
-
+		str = "(nil)";
 	printf("%s", str);
 }
 
@@ -61,7 +51,7 @@ void print_all(const char * const format, ...)
 	int i = 0, j = 0;
 	char *sparator = "";
 
-	printer_t opi[] = {
+	format_t formats[] = {
 		{"c", print_char},
 		{"i", print_integer},
 		{"f", print_float},
@@ -73,7 +63,7 @@ void print_all(const char * const format, ...)
 	while (format && (*(format + i)))
 	{
 		j = 0;
-		while (j < 4 && (*(format + i) != *(opi[j])datyp))
+		while (j < 4 && (*(format + i) != *(formats[j].f(ptr)))
 			j++;
 
 		if (j < 4)
