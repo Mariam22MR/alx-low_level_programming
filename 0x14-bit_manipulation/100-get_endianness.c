@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * get_endianness - get the endiannes of the system
- * 
+ * get_endianness - get the endiannes of the system.
+ *
  * Return: 1 if small endian, 0 big endian.
  */
 
