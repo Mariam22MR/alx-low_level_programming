@@ -83,7 +83,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 	if (ht->shead == NULL)
 	{
 		node->sprev = NULL;
-		node>snext = NULL;
+		node->snext = NULL;
 		ht->shead = node;
 		ht->stail = node;
 	}
@@ -157,7 +157,7 @@ void shash_table_print(const shash_table_t *ht)
 	while (new != NULL)
 	{
 		printf("'%s': '%s'", new->key, new->value);
-		new = newe->snext;
+		new = new->snext;
 		if (new != NULL)
 			printf(", ");
 	}
@@ -217,4 +217,4 @@ void shash_table_delete(shash_table_t *ht)
 
 	free(head->array);
 	free(head);
-
+}
