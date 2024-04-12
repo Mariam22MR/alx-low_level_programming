@@ -15,7 +15,7 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 	size_t step, step_size;
 	listint_t *node, *jump;
 
-	if (list == NULL)
+	if (!list)
 		return (NULL);
 
 	step = 0;
