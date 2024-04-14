@@ -7,8 +7,7 @@
  * @value: Value being searched for.
  *
  * Return: If value is not present or array is NULL, -1.
- * 			 first index where value is located.
- * 
+ * 			first index where value is located.
  * Description: Prints value every time it is compared in array.
  *              Uses square root of array size as jump step.
  */
